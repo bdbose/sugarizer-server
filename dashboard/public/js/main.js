@@ -815,6 +815,13 @@ function generateQRCode() {
 	$("#qrpopup").modal();
 }
 
+function closeModal() {
+	$('#qrpopup').on('show.bs.modal', function () {
+		$(this).find('.modal-dialog').css({width:'350px',height:'350px'});
+	});
+	$("#qrpopup").modal();
+}
+
 // Decoding functions taken from
 // https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 function b64ToUint6(nChr) {
